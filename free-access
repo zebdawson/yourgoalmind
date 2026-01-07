@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Goal Mind - Free Business Freedom Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2E4964 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .subheadline {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .hero .offer-statement {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-container h3 {
+            color: #1e3c72;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: #ff6b35;
+            color: white;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+        }
+        
+        .privacy-note {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .problem-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3c72;
+        }
+        
+        .problem-text {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+        }
+        
+        /* Dave's Story Section */
+        .story-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .story-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3c72;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .story-image {
+            flex: 0 0 300px;
+        }
+        
+        .story-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .story-text {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .story-text strong {
+            color: #1e3c72;
+        }
+        
+        /* Modules Section */
+        .modules-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .modules-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1e3c72;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+        }
+        
+        .module-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .module-number {
+            background: #ff6b35;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .module-card h3 {
+            font-size: 22px;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .module-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .bonus-card {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bonus-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .bonus-card p {
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .final-cta .subtext {
+            font-size: 20px;
+            margin-bottom: 50px;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            .hero .offer-statement {
+                font-size: 18px;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .problem-section h2,
+            .story-section h2,
+            .modules-section h2 {
+                font-size: 28px;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .story-image {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .final-cta h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Stop Building a Business That Owns You – Start Building One That Sets You Free</h1>
+            
+            <p class="subheadline">
+                Join 500+ service business owners learning the exact system that helped a carpet cleaning company owner go from working 70-hour weeks to selling his business and teaching others how to do the same.
+            </p>
+            
+            <div class="offer-statement">
+                Get FREE access to the first 3 modules of Your Goal Mind when we launch January 12th, 2026
+            </div>
+            
+            <div class="form-container">
+                <h3>Secure Your Free Access Now</h3>
+                
+                <!-- IMPORTANT: Replace this form with your GHL form element -->
+                <!-- This is just the HTML structure - you'll connect it to GHL's form system -->
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Me Free Access</button>
+                    
+                    <p class="privacy-note">
+                        No credit card required. Unsubscribe anytime. We respect your inbox.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>If This Sounds Familiar, You're Not Alone</h2>
+            
+            <div class="problem-text">
+                <p>
+                    You built a business that was supposed to give you freedom, but instead it's trapped you. 
+                    Every vacation gets interrupted. Every weekend you're thinking about Monday. Your phone rings 
+                    and your stomach drops because you know it's a problem only you can solve.
+                </p>
+                <br>
+                <p>
+                    You have employees, but you don't have a team. You have revenue, but you don't have profit. 
+                    You're working harder than ever and getting further behind.
+                </p>
+                <br>
+                <p>
+                    You know you need systems, you know you need to delegate, you know you need better processes — 
+                    but <strong>knowing what to do and actually doing it are two completely different things.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dave's Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2>I Know Exactly How You Feel — Because I Was You</h2>
+            
+            <div class="story-content">
+                <div class="story-image">
+                    <!-- Replace with actual image of Dave -->
+                    <img src="https://via.placeholder.com/300x400/1e3c72/ffffff?text=Dave+Pastor" alt="Dave Pastor">
+                </div>
+                
+                <div class="story-text">
+                    <p>
+                        My name is <strong>Dave Pastor</strong>, and I spent fifteen years building what looked like 
+                        a successful carpet cleaning business. We were doing over $500,000 in revenue. I had twelve 
+                        employees and a fleet of trucks.
+                    </p>
+                    <br>
+                    <p>
+                        But here's the truth — I had built myself a very expensive job. I couldn't take a vacation. 
+                        I couldn't miss a day. I was making money but losing my life.
+                    </p>
+                    <br>
+                    <p>
+                        Then I discovered something that changed everything. It wasn't a new marketing strategy or 
+                        a better hiring process. <strong>It was getting clear on who I was trying to become, not just 
+                        what I was trying to achieve.</strong>
+                    </p>
+                    <br>
+                    <p>
+                        Once I had that clarity, everything else fell into place. I built systems that worked. 
+                        I hired people I could trust. And eventually, I sold my business and now I help other 
+                        service business owners do the same.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modules Section -->
+    <section class="modules-section">
+        <div class="container">
+            <h2>Here's What You'll Get Access To On January 1st</h2>
+            
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">1</div>
+                    <h3>Discover Where You Really Are — The Business Freedom Wheel Assessment</h3>
+                    <p>
+                        In 15 minutes, you'll get crystal-clear insight into the seven areas of your business 
+                        and identify the one keystone area that's holding everything else back. Most business 
+                        owners have never done this level of honest assessment.
+                    </p>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-number">2</div>
+                    <h3>The Eulogy Exercise — Who Are You Becoming?</h3>
+                    <p>
+                        This might sound dark, but it's the most powerful clarity exercise you'll ever do. 
+                        You'll discover the disconnect between the goals you're chasing and the person you 
+                        actually want to become — and why that disconnect is sabotaging everything.
+                    </p>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-number">3</div>
+                    <h3>The SMART Goal Framework for Service Business Owners</h3>
+                    <p>
+                        Learn how to set goals that actually stick because they align with who you're becoming. 
+                        This isn't generic goal-setting theory — this is specifically designed for business owners 
+                        who operate in the real world with real constraints.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bonus-card">
+                <h3>🎁 BONUS: Private Community Access</h3>
+                <p>
+                    Get exclusive access to our private community where you can connect with other service 
+                    business owners on the same journey, share wins, and get support when you're stuck.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Your Business Can Set You Free — But Only If You Take the First Step</h2>
+            
+            <p class="subtext">
+                We're launching January 1st with limited spots in our founding member community.<br>
+                Sign up now to guarantee your free access.
+            </p>
+            
+            <div class="form-container">
+                <h3>Join The Waitlist Now</h3>
+                
+                <!-- IMPORTANT: Replace this form with your GHL form element -->
+                <!-- This should be the same form as above -->
+                <form id="signup-form-2">
+                    <div class="form-group">
+                        <label for="first-name-2">First Name</label>
+                        <input type="text" id="first-name-2" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email-2">Email Address</label>
+                        <input type="email" id="email-2" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Me Free Access</button>
+                    
+                    <p class="privacy-note">
+                        No credit card required. Unsubscribe anytime. We respect your inbox.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Goal Mind. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="mailto:dave@yourgoalmind.com">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
