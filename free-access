@@ -433,7 +433,7 @@
             <div class="story-content">
                 <div class="story-image">
                     <!-- Replace with actual image of Dave -->
-                    <img src="https://via.placeholder.com/300x400/1e3c72/ffffff?text=Dave+Pastor" alt="Dave Pastor">
+                    <img src="https://storage.googleapis.com/msgsndr/LTcKFhdwhaLWmwEj42WE/media/695dc4ad30b9c06cde853b0e.jpeg" alt="Dave Pastor">
                 </div>
                 
                 <div class="story-text">
@@ -467,7 +467,7 @@
     <!-- Modules Section -->
     <section class="modules-section">
         <div class="container">
-            <h2>Here's What You'll Get Access To On January 1st</h2>
+            <h2>Here's What You'll Get Access To On January 12th</h2>
             
             <div class="modules-grid">
                 <div class="module-card">
@@ -517,7 +517,7 @@
             <h2>Your Business Can Set You Free — But Only If You Take the First Step</h2>
             
             <p class="subtext">
-                We're launching January 1st with limited spots in our founding member community.<br>
+                We're launching January 12th with limited spots in our founding member community.<br>
                 Sign up now to guarantee your free access.
             </p>
             
@@ -550,7 +550,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Your Goal Mind. All rights reserved.</p>
+            <p>&copy; 2026 Your Goal Mind. All rights reserved.</p>
             <p>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
